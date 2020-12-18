@@ -10,6 +10,7 @@ const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
 
 const moragn = require('morgan');
+// start express
 const app = express();
 
 const tourRouter = require('./routes/toursRoutes');
