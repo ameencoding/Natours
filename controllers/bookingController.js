@@ -46,8 +46,8 @@ exports.createBookingCheckout = catchAsync(async (req, res, next) => {
   res.redirect(req.originalUrl.split('?')[0]);
 });
 
-exports.createBooking = factory.createOne(Booking);
-exports.getBooking = factory.getOne(Booking);
-exports.getAllBookings = factory.getAll(Booking);
-exports.updateBooking = factory.UpdateOne(Booking);
-exports.deleteBooking = factory.deleteOne(Booking);
+exports.createBooking = factory.createOne(Bookings);
+exports.getBooking = factory.getOne(Bookings);
+exports.getAllBookings = factory.getAll(Bookings);
+exports.updateBooking = factory.UpdateOne(Bookings);
+exports.deleteBooking = factory.deleteOne(Bookings);
