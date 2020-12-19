@@ -1,6 +1,6 @@
 const Tour = require('../models/tourModel');
 const User = require('../models/userModel');
-const Booking = require('../models/BookingModel');
+const Booking = require('../models/bookingModel');
 const AppError = require('../utils/appError');
 const catchAsync = require('../utils/catchAsync');
 

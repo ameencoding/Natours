@@ -1,6 +1,4 @@
-const { Model } = require('mongoose');
 const APIfeature = require('./../utils/apiFeutures');
-
 const catchAsync = require('./../utils/catchAsync');
 const appError = require('../utils/appError');
 
