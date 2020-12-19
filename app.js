@@ -20,10 +20,6 @@ const reviewRouter = require('./routes/reviewsRoutes');
 const bookingRouter = require('./routes/bookingRoutes');
 const viewRouter = require('./routes/viewRoutes');
 
-const { getMonthlyPlan } = require('./controllers/tourController');
-
-console.log(process.env.NODE_ENV);
-
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
