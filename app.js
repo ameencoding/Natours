@@ -13,6 +13,7 @@ const compression = require('compression');
 const moragn = require('morgan');
 // start express
 const app = express();
+app.enable('trust proxy');
 
 const tourRouter = require('./routes/toursRoutes');
 const userRouter = require('./routes/usersRoutes');
