@@ -1,6 +1,4 @@
 const path = require('path');
-const appErr = require('./utils/appError');
-const globalErrorHandler = require('./controllers/errorController');
 const express = require('express');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
@@ -9,12 +7,15 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
 const compression = require('compression');
-
 const moragn = require('morgan');
+const cors = require('cors');
+
 // start express
 const app = express();
 app.enable('trust proxy');
 
+const appErr = require('./utils/appError');
+const globalErrorHandler = require('./controllers/errorController');
 const tourRouter = require('./routes/toursRoutes');
 const userRouter = require('./routes/usersRoutes');
 const reviewRouter = require('./routes/reviewsRoutes');
@@ -25,6 +26,10 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 /* GLOBAL middlewares */
+
+// Implement CORS
+app.use(cors());
+app.options('*', cors());
 
 //surving static files
 app.use(express.static(path.join(__dirname, 'public')));
