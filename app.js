@@ -7,7 +7,7 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
 const compression = require('compression');
-const moragn = require('morgan');
+const morgan = require('morgan');
 const cors = require('cors');
 
 // start express
@@ -37,7 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Development logging
 if (process.env.NODE_ENV === 'development') {
-  app.use(moragn('dev'));
+  app.use(morgan('dev'));
 }
 
 // lmiting request from same API

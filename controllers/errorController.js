@@ -89,7 +89,7 @@ module.exports = (err, req, res, next) => {
   if (process.env.NODE_ENV === 'development') {
     sendErrorDev(err, req, res);
   } else if (process.env.NODE_ENV === 'production') {
-    // i muted this variable 'error' distructuring, which is not working to me i used 'err' and it works fine.
+    // i muted this variable 'error' spreeding, which is not working to me i used 'err' and it works fine.
     let error = { ...err };
     if (err.name === 'CastError') err = handleCastErrorDB(err);
     if (err.code === 11000) err = handleDuplicateFieldsDB(err);
